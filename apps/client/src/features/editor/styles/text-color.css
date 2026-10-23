@@ -1,0 +1,112 @@
+/* Text colors: Notion's light-mode and dark-mode palettes.
+ * Documents keep storing the original values from TEXT_COLORS in
+ * color-selector.tsx; these rules only change how they are displayed,
+ * so existing colored text picks up the new palette too. A stored color can
+ * be hex (#2563EB) or rgb (rgb(37, 99, 235)), so both forms are matched.
+ * The dark values use Mantine's color-scheme attribute rather than
+ * light-dark(), which postcss-preset-mantine can't expand inside :root. */
+
+:root {
+  --docmost-text-blue: #337EA9;
+  --docmost-text-green: #448361;
+  --docmost-text-purple: #9065B0;
+  --docmost-text-red: #D44C47;
+  --docmost-text-yellow: #D29E00;
+  --docmost-text-orange: #D9730D;
+  --docmost-text-pink: #C14C8A;
+  --docmost-text-gray: #787774;
+  --docmost-text-brown: #9F6B53;
+}
+
+:root[data-mantine-color-scheme="dark"] {
+  --docmost-text-blue: #529CCA;
+  --docmost-text-green: #4DAB9A;
+  --docmost-text-purple: #9A6DD7;
+  --docmost-text-red: #FF7369;
+  --docmost-text-yellow: #E3C142;
+  --docmost-text-orange: #FFA344;
+  --docmost-text-pink: #E255A1;
+  --docmost-text-gray: #979A9B;
+  --docmost-text-brown: #937264;
+}
+
+/* Blue */
+.ProseMirror span[style*="#2563EB" i],
+.ProseMirror span[style*="rgb(37, 99, 235)"],
+.ProseMirror span[style*="rgb(37,99,235)"],
+.color-selector-trigger[data-text-color="#2563EB"],
+[data-text-swatch="#2563EB"] {
+  color: var(--docmost-text-blue) !important;
+}
+
+/* Green */
+.ProseMirror span[style*="#008A00" i],
+.ProseMirror span[style*="rgb(0, 138, 0)"],
+.ProseMirror span[style*="rgb(0,138,0)"],
+.color-selector-trigger[data-text-color="#008A00"],
+[data-text-swatch="#008A00"] {
+  color: var(--docmost-text-green) !important;
+}
+
+/* Purple */
+.ProseMirror span[style*="#9333EA" i],
+.ProseMirror span[style*="rgb(147, 51, 234)"],
+.ProseMirror span[style*="rgb(147,51,234)"],
+.color-selector-trigger[data-text-color="#9333EA"],
+[data-text-swatch="#9333EA"] {
+  color: var(--docmost-text-purple) !important;
+}
+
+/* Red */
+.ProseMirror span[style*="#E00000" i],
+.ProseMirror span[style*="rgb(224, 0, 0)"],
+.ProseMirror span[style*="rgb(224,0,0)"],
+.color-selector-trigger[data-text-color="#E00000"],
+[data-text-swatch="#E00000"] {
+  color: var(--docmost-text-red) !important;
+}
+
+/* Yellow */
+.ProseMirror span[style*="#EAB308" i],
+.ProseMirror span[style*="rgb(234, 179, 8)"],
+.ProseMirror span[style*="rgb(234,179,8)"],
+.color-selector-trigger[data-text-color="#EAB308"],
+[data-text-swatch="#EAB308"] {
+  color: var(--docmost-text-yellow) !important;
+}
+
+/* Orange */
+.ProseMirror span[style*="#FFA500" i],
+.ProseMirror span[style*="rgb(255, 165, 0)"],
+.ProseMirror span[style*="rgb(255,165,0)"],
+.color-selector-trigger[data-text-color="#FFA500"],
+[data-text-swatch="#FFA500"] {
+  color: var(--docmost-text-orange) !important;
+}
+
+/* Pink */
+.ProseMirror span[style*="#BA4081" i],
+.ProseMirror span[style*="rgb(186, 64, 129)"],
+.ProseMirror span[style*="rgb(186,64,129)"],
+.color-selector-trigger[data-text-color="#BA4081"],
+[data-text-swatch="#BA4081"] {
+  color: var(--docmost-text-pink) !important;
+}
+
+/* Gray */
+.ProseMirror span[style*="#A8A29E" i],
+.ProseMirror span[style*="rgb(168, 162, 158)"],
+.ProseMirror span[style*="rgb(168,162,158)"],
+.color-selector-trigger[data-text-color="#A8A29E"],
+[data-text-swatch="#A8A29E"] {
+  color: var(--docmost-text-gray) !important;
+}
+
+/* Brown */
+.ProseMirror span[style*="#92400E" i],
+.ProseMirror span[style*="rgb(146, 64, 14)"],
+.ProseMirror span[style*="rgb(146,64,14)"],
+.color-selector-trigger[data-text-color="#92400E"],
+[data-text-swatch="#92400E"] {
+  color: var(--docmost-text-brown) !important;
+}

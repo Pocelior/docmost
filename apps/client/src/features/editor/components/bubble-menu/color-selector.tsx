@@ -271,6 +271,7 @@ export const ColorSelector: FC<ColorSelectorProps> = ({
                       tabIndex={0}
                       data-autofocus={index === 0 ? true : undefined}
                       data-color-grid="text"
+                      data-text-swatch={color || undefined}
                       data-color-index={index}
                       className={classes.colorSwatch}
                       aria-label={t(name)}
@@ -337,6 +338,7 @@ export const ColorSelector: FC<ColorSelectorProps> = ({
                       role="button"
                       tabIndex={0}
                       data-color-grid="highlight"
+                      data-highlight-swatch={color || undefined}
                       data-color-index={index}
                       className={classes.colorSwatch}
                       aria-label={t(name)}

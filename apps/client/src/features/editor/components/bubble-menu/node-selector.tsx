@@ -9,6 +9,7 @@ import {
   IconH1,
   IconH2,
   IconH3,
+  IconH4,
   IconInfoCircle,
   IconList,
   IconListNumbers,
@@ -56,6 +57,7 @@ export const NodeSelector: FC<NodeSelectorProps> = ({
         isHeading1: ctx.editor.isActive("heading", { level: 1 }),
         isHeading2: ctx.editor.isActive("heading", { level: 2 }),
         isHeading3: ctx.editor.isActive("heading", { level: 3 }),
+        isHeading4: ctx.editor.isActive("heading", { level: 4 }),
         isTaskItem: ctx.editor.isActive("taskItem"),
         isBlockquote: ctx.editor.isActive("blockquote"),
         isCodeBlock: ctx.editor.isActive("codeBlock"),
@@ -94,6 +96,12 @@ export const NodeSelector: FC<NodeSelectorProps> = ({
       icon: IconH3,
       command: () => editor.chain().focus().toggleHeading({ level: 3 }).run(),
       isActive: () => editorState?.isHeading3,
+    },
+    {
+      name: "Heading 4",
+      icon: IconH4,
+      command: () => editor.chain().focus().toggleHeading({ level: 4 }).run(),
+      isActive: () => editorState?.isHeading4,
     },
     {
       name: "To-do List",

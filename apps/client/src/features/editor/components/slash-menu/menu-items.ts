@@ -6,6 +6,7 @@ import {
   IconH1,
   IconH2,
   IconH3,
+  IconH4,
   IconInfoCircle,
   IconLayoutKanban,
   IconList,
@@ -125,6 +126,20 @@ const CommandGroups: SlashMenuGroupedItemsType = {
           .focus()
           .deleteRange(range)
           .setNode("heading", { level: 3 })
+          .run();
+      },
+    },
+    {
+      title: "Heading 4",
+      description: "Smallest section heading.",
+      searchTerms: ["subtitle", "smallest"],
+      icon: IconH4,
+      command: ({ editor, range }: CommandProps) => {
+        editor
+          .chain()
+          .focus()
+          .deleteRange(range)
+          .setNode("heading", { level: 4 })
           .run();
       },
     },

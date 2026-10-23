@@ -9,6 +9,7 @@ import {
   IconH1,
   IconH2,
   IconH3,
+  IconH4,
   IconMenu4,
   IconPageBreak,
   IconTypography,
@@ -28,6 +29,7 @@ export const BlockTypeGroup: FC<Props> = ({ editor }) => {
       isHeading1: !!ctx.editor?.isActive("heading", { level: 1 }),
       isHeading2: !!ctx.editor?.isActive("heading", { level: 2 }),
       isHeading3: !!ctx.editor?.isActive("heading", { level: 3 }),
+      isHeading4: !!ctx.editor?.isActive("heading", { level: 4 }),
       isBlockquote: !!ctx.editor?.isActive("blockquote"),
       isCodeBlock: !!ctx.editor?.isActive("codeBlock"),
     }),
@@ -37,6 +39,7 @@ export const BlockTypeGroup: FC<Props> = ({ editor }) => {
   if (state.isHeading1) label = t("Heading 1");
   else if (state.isHeading2) label = t("Heading 2");
   else if (state.isHeading3) label = t("Heading 3");
+  else if (state.isHeading4) label = t("Heading 4");
   else if (state.isBlockquote) label = t("Quote");
   else if (state.isCodeBlock) label = t("Code block");
 
@@ -84,6 +87,14 @@ export const BlockTypeGroup: FC<Props> = ({ editor }) => {
           }
         >
           {t("Heading 3")}
+        </Menu.Item>
+        <Menu.Item
+          leftSection={<IconH4 size={16} />}
+          onClick={() =>
+            editor.chain().focus().toggleHeading({ level: 4 }).run()
+          }
+        >
+          {t("Heading 4")}
         </Menu.Item>
         <Menu.Item
           leftSection={<IconBlockquote size={16} />}
