@@ -127,6 +127,13 @@ export const mantineCssResolver: CSSVariablesResolver = (theme) => ({
   },
   dark: {
     ...v8CssVariablesResolver(theme).dark,
+    // Darker app and editor background than Mantine's default #242424.
+    // dark-8 (header, sidebar, code blocks) and dark-9 shift by the same
+    // amount so they stay darker than the page, as in stock Docmost.
+    "--mantine-color-body": "#141517",
+    "--mantine-color-dark-7": "#141517",
+    "--mantine-color-dark-8": "#0F1012",
+    "--mantine-color-dark-9": "#08090A",
     "--mantine-color-dark-light-color": "var(--mantine-color-gray-4)",
     "--mantine-color-dark-light-hover": "var(--mantine-color-default-hover)",
   },

@@ -11,9 +11,10 @@
     var(--mantine-color-white),
     var(--mantine-color-dark-7)
   );
+  /* Dark mode body text is a soft grey so colored headings stand out. */
   color: light-dark(
     var(--mantine-color-default-color),
-    var(--mantine-color-white)
+    #D4D7DC
   );
   font-size: var(--mantine-font-size-md);
   line-height: var(--mantine-line-height-xl);

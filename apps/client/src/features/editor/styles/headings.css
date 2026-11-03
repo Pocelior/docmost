@@ -1,4 +1,4 @@
-/* Heading styles: Lora for H1-H2, Inter for H3-H4, each pair with its own
+/* Heading styles: Lora for H1-H2, Inter for H3-H4, each level with its own
  * color; the page title keeps Docmost's default font and color.
  * Lora is bundled from src/assets/fonts/lora (SIL OFL 1.1, see LICENSE there);
  * Inter comes from the existing @fontsource-variable/inter dependency. */
@@ -36,26 +36,40 @@
   h2 {
     font-family: "Lora Variable", Georgia, "Times New Roman", serif;
     font-weight: 700;
-    color: light-dark(#1C4A85, #C2D8F2);
 
     strong {
       font-weight: 700;
     }
   }
 
+  /* Each level has its own color: light-dark(light mode, dark mode).
+   * Dark mode shades are muted and share a ~6:1 contrast on the dark
+   * background, so no single level glows more than the others. */
+
+  /* Orchid */
   h1 {
     font-size: 2.125rem;
+    color: light-dark(#A3307F, #CE77B5);
   }
 
-  /* Steel blue, kept distinct from the Blue text color. */
+  /* Ocean blue */
+  h2 {
+    color: light-dark(#0B4F8A, #5F98D1);
+  }
+
   h3,
   h4 {
     font-family: "Inter Variable", var(--mantine-font-family);
-    color: light-dark(#2E5FA6, #8EBBEA);
   }
 
-  /* H3 keeps Docmost's 20px; H4 sits between H3 and body text. */
+  /* Ocean teal */
+  h3 {
+    color: light-dark(#0E7490, #47A0AF);
+  }
+
+  /* Violet. H3 keeps Docmost's 20px; H4 sits between H3 and body text. */
   h4 {
+    color: light-dark(#6B3FB8, #9E88D3);
     font-size: 1.125rem;
     font-style: italic;
     font-weight: 600;
