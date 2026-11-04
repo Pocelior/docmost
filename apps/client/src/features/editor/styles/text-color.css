@@ -18,14 +18,17 @@
   --docmost-text-brown: #9F6B53;
 }
 
+/* Dark values are Notion's palette with ~20% less saturation (brown and
+ * gray kept as-is). Green moved from teal to a true green, red shifted away
+ * from orange, and orange shifted slightly away from yellow. */
 :root[data-mantine-color-scheme="dark"] {
-  --docmost-text-blue: #529CCA;
-  --docmost-text-green: #4DAB9A;
-  --docmost-text-purple: #9A6DD7;
-  --docmost-text-red: #FF7369;
-  --docmost-text-yellow: #E3C142;
-  --docmost-text-orange: #FFA344;
-  --docmost-text-pink: #E255A1;
+  --docmost-text-blue: #639CBE;
+  --docmost-text-green: #56AD6C;
+  --docmost-text-purple: #9672C9;
+  --docmost-text-red: #EE7379;
+  --docmost-text-yellow: #D9C370;
+  --docmost-text-orange: #ECA265;
+  --docmost-text-pink: #D2649F;
   --docmost-text-gray: #979A9B;
   --docmost-text-brown: #937264;
 }

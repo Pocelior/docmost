@@ -48,12 +48,15 @@
 
   /* Orchid */
   h1 {
-    font-size: 2.125rem;
+    font-size: 2.25rem;  /* 36px */
+    margin-top: 2.25rem;
     color: light-dark(#A3307F, #CE77B5);
   }
 
   /* Ocean blue */
   h2 {
+    font-size: 1.75rem;  /* 28px */
+    margin-top: 1.75rem;
     color: light-dark(#0B4F8A, #5F98D1);
   }
 
@@ -64,13 +67,15 @@
 
   /* Ocean teal */
   h3 {
+    font-size: 1.5rem;  /* 24px */
+    margin-top: 1.5rem;
     color: light-dark(#0E7490, #47A0AF);
   }
 
-  /* Violet. H3 keeps Docmost's 20px; H4 sits between H3 and body text. */
+  /* Royal blue. H4 sits between H3 and body text. */
   h4 {
-    color: light-dark(#6B3FB8, #9E88D3);
-    font-size: 1.125rem;
+    color: light-dark(#3F53A5, #8091D5);
+    font-size: 1.25rem;  /* 20px */
     font-style: italic;
     font-weight: 600;
     letter-spacing: -0.01em;
@@ -82,5 +87,6 @@
 
 .page-title .ProseMirror h1 {
   font-family: var(--mantine-font-family-headings);
+  font-size: 2.75rem;  /* 44px */
   color: inherit;
 }

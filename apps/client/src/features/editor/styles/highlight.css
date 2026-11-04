@@ -1,69 +1,71 @@
 /* Highlight colors with dark mode support.
  * Documents keep storing the original values from HIGHLIGHT_COLORS in
  * color-selector.tsx; these rules set how they are displayed in the editor,
- * the toolbar trigger and the color picker swatches. */
+ * the toolbar trigger and the color picker swatches.
+ * Dark values are tuned for more saturation while keeping body text on
+ * them at about 7.8:1 contrast. */
 
 /* Blue */
 .ProseMirror mark[data-color="#98d8f2"],
 .color-selector-trigger[data-highlight-color="#98d8f2"],
 [data-highlight-swatch="#98d8f2"] {
-  background-color: light-dark(#DDE8F4, #263746) !important;
+  background-color: light-dark(#DDE8F4, #243C55) !important;
 }
 
 /* Green */
 .ProseMirror mark[data-color="#7edb6c"],
 .color-selector-trigger[data-highlight-color="#7edb6c"],
 [data-highlight-swatch="#7edb6c"] {
-  background-color: light-dark(#E2EEDE, #2A382C) !important;
+  background-color: light-dark(#E2EEDE, #244129) !important;
 }
 
 /* Purple */
 .ProseMirror mark[data-color="#e0d6ed"],
 .color-selector-trigger[data-highlight-color="#e0d6ed"],
 [data-highlight-swatch="#e0d6ed"] {
-  background-color: light-dark(#EAE2F2, #372F44) !important;
+  background-color: light-dark(#EAE2F2, #46315F) !important;
 }
 
 /* Red */
 .ProseMirror mark[data-color="#ffc6c2"],
 .color-selector-trigger[data-highlight-color="#ffc6c2"],
 [data-highlight-swatch="#ffc6c2"] {
-  background-color: light-dark(#F7DFDC, #432C2C) !important;
+  background-color: light-dark(#F7DFDC, #5B2D2F) !important;
 }
 
 /* Yellow */
 .ProseMirror mark[data-color="#faf594"],
 .color-selector-trigger[data-highlight-color="#faf594"],
 [data-highlight-swatch="#faf594"] {
-  background-color: light-dark(#FDF1BE, #4A3F1C) !important;
+  background-color: light-dark(#FDF1BE, #4D4016) !important;
 }
 
 /* Orange */
 .ProseMirror mark[data-color="#f5c8a9"],
 .color-selector-trigger[data-highlight-color="#f5c8a9"],
 [data-highlight-swatch="#f5c8a9"] {
-  background-color: light-dark(#F8E3D0, #433429) !important;
+  background-color: light-dark(#F8E3D0, #52331F) !important;
 }
 
 /* Pink */
 .ProseMirror mark[data-color="#f5cfe0"],
 .color-selector-trigger[data-highlight-color="#f5cfe0"],
 [data-highlight-swatch="#f5cfe0"] {
-  background-color: light-dark(#F5DFE9, #3F2E39) !important;
+  background-color: light-dark(#F5DFE9, #562D47) !important;
 }
 
 /* Gray */
 .ProseMirror mark[data-color="#dfdfd7"],
 .color-selector-trigger[data-highlight-color="#dfdfd7"],
 [data-highlight-swatch="#dfdfd7"] {
-  background-color: light-dark(#E9E9E6, #333538) !important;
+  background-color: light-dark(#E9E9E6, #393A3E) !important;
 }
 
 /* Brown */
 .ProseMirror mark[data-color="#d7c4b7"],
 .color-selector-trigger[data-highlight-color="#d7c4b7"],
 [data-highlight-swatch="#d7c4b7"] {
-  background-color: light-dark(#ECE1D7, #39322C) !important;
+  background-color: light-dark(#ECE1D7, #423930) !important;
 }
 
 /* Rounded highlights; each wrapped line gets its own rounded ends. */
